@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/rb_first"
+        style="@style/footer"
+        android:checked="true"
+        android:text="@string/foot_first" />
+
+    <RadioButton
+        android:id="@+id/rb_second"
+        style="@style/footer"
+        android:checked="true"
+        android:text="@string/foot_second" />
+
+    <RadioButton
+        android:id="@+id/rb_third"
+        style="@style/footer"
+        android:checked="true"
+        android:text="@string/foot_third" />
+
+</LinearLayout>

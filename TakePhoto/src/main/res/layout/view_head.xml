@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    style="@style/title_bg"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/title_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:src="@mipmap/arr_mid_grey_left" />
+
+            <TextView
+                android:id="@+id/text_back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="4"
+                android:gravity="center|left"
+                android:text="返回"
+                android:textColor="@drawable/selector_back_btn"
+                android:textSize="17sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_title"
+                style="@style/wrap"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:text="你好你好"
+                android:textSize="22sp"></TextView>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_addnotify"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_plus"-->
+                <!--android:layout_width="36dp"-->
+                <!--android:layout_height="36dp"-->
+                <!--android:layout_gravity="center|right"-->
+                <!--android:maxHeight="36dp"-->
+                <!--android:maxWidth="36dp"-->
+                <!--android:src="@drawable/add_white"-->
+                <!--android:visibility="invisible" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_sure"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center|right"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:text="@string/sure"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="17sp"-->
+                <!--android:visibility="invisible" />-->
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

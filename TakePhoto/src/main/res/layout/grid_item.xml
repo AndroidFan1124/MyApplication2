@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="165px"
+    android:background="@color/white" >
+
+    <com.example.myapplication.widget.MyImageView
+        android:id="@+id/grid_item"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:scaleType="fitXY" />
+    <CheckBox
+        android:id="@+id/loc_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="visible" />
+
+</FrameLayout>
