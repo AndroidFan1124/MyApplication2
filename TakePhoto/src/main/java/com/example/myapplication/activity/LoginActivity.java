@@ -40,18 +40,16 @@ public class LoginActivity extends BaseMainActivity implements View.OnClickListe
         et_name = (EditText)findViewById(R.id.et_userName);
         et_pass = (EditText)findViewById(R.id.et_passWord);
 
-
-
     }
     private void initEvents() {
         btn_forget.setOnClickListener(this);
         btn_login.setOnClickListener(this);
-        btn_forget.setOnClickListener(this);
+        btn_register.setOnClickListener(this);
 
     }
 
     private void initData() {
-        presenter = new LoginPresenter(this,getNetwork());
+        presenter = new LoginPresenter(this,getNetwork(),this);
     }
 
     @Override
@@ -73,8 +71,11 @@ public class LoginActivity extends BaseMainActivity implements View.OnClickListe
                 presenter.login();
                 break;
             case R.id.btn_register:
+                Log.d("wmy","wmy---->onClick");
+                presenter.toRegister();
                 break;
             case R.id.tv_forget:
+                presenter.toForget();
                 break;
             default:
                 break;
@@ -85,5 +86,8 @@ public class LoginActivity extends BaseMainActivity implements View.OnClickListe
     public void onReceive(Object obj) {
         super.onReceive(obj);
         Log.d("wmy","obj:"+obj.toString());
+        presenter.parse(obj.toString());
     }
+
+
 }

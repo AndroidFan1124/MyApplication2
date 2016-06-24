@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import com.example.myapplication.StickyGridAdapter;
 import com.example.myapplication.activity.ImageActivity;
-import com.example.myapplication.entity.GridItem;
+import com.example.myapplication.entity.Picture;
 import com.example.myapplication.util.ImageScanner;
 import com.example.myapplication.util.YMComparator;
 import com.example.myapplication.view.IOrderTimeView;
@@ -62,7 +62,7 @@ public class OrderTimePresenter {
     private ProgressDialog dialog = null;
     public ProgressDialog mProgressDialog;
 
-    private List<GridItem> mGirdList = new ArrayList<GridItem>();
+    private List<Picture> mGirdList = new ArrayList<Picture>();
 
     private GridView mGridview;
     private TextView seleted_all;
@@ -101,14 +101,17 @@ public class OrderTimePresenter {
                     String path = cursor.getString(cursor
                             .getColumnIndex(MediaStore.Images.Media.DATA));
                     long times = cursor.getLong(cursor.getColumnIndex(MediaStore.Images.Media.DATE_ADDED));
-                    GridItem item = new GridItem(path, paserTimeToYM(times));
-                    mGirdList.add(item);
+
+                    Picture picture = new Picture();
+                    picture.setPath(path);
+                    picture.setTime(paserTimeToYM(times));
+                    mGirdList.add(picture);
                 }
                 cursor.close();
                 Collections.sort(mGirdList, new YMComparator());
 
-                for (ListIterator<GridItem> it = mGirdList.listIterator(); it.hasNext(); ) {
-                    GridItem mGridItem = it.next();
+                for (ListIterator<Picture> it = mGirdList.listIterator(); it.hasNext(); ) {
+                    Picture mGridItem = it.next();
                     String ym = mGridItem.getTime();
                     if (!sectionMap.containsKey(ym)) {
                         mGridItem.setSection(section);
@@ -223,7 +226,7 @@ public class OrderTimePresenter {
     public void delete(){
         // 删除
 
-        final List<GridItem> list = new ArrayList<GridItem>();
+        final List<Picture> list = new ArrayList<Picture>();
 
         for (int i = 0; i < mGirdList.size(); i++) {
             if (mSelectMap.containsKey(i) == true) {
@@ -249,7 +252,7 @@ public class OrderTimePresenter {
         show_num.setText("已选中" + checkNum + "项");
     }
 
-    class removeTask extends AsyncTask<List<GridItem>, Integer, Integer> {
+    class removeTask extends AsyncTask<List<Picture>, Integer, Integer> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -262,8 +265,8 @@ public class OrderTimePresenter {
         }
 
         @Override
-        protected Integer doInBackground(List<GridItem>... params) {
-            for (GridItem f : params[0]) {
+        protected Integer doInBackground(List<Picture>... params) {
+            for (Picture f : params[0]) {
                 String path = f.getPath();
                 mGirdList.remove(f);
                 if (!TextUtils.isEmpty(path)) {
@@ -292,7 +295,6 @@ public class OrderTimePresenter {
             super.onPostExecute(result);
             dataChanged();
             dialog.cancel();
-
         }
     }
 }

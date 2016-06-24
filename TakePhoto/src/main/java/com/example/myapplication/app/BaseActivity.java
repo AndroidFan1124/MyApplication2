@@ -36,6 +36,25 @@ public class BaseActivity extends Activity  implements NetworkWatcher {
 
 	private void initData() {
 		// TODO Auto-generated method stub
+//		PackageUtil.getAppInfo();
+		//检测SD卡是否存在
+//		if (Environment.getExternalStorageState().equals(
+//				Environment.MEDIA_MOUNTED)) {
+//			File path = Environment.getExternalStorageDirectory();
+//		}else{
+//			Toast.makeText(this, "没有SD卡", Toast.LENGTH_LONG).show();
+//			finish();
+//		}
+//		Map<String,List<File>> map = PackageUtil.getAllAppPic();
+//		if(map!=null) {
+//			Set<String> set = map.keySet();
+//			for (String s : set) {
+//				List<File> listFile = map.get(s);
+//				for (File f : listFile) {
+//					Log.d("wmy", f.getPath() + "------>" + f.getName());
+//				}
+//			}
+//		}
 		nw = new Network();
 		nw.addNetworkWatched(this);
 	}

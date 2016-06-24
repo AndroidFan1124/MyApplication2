@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/lightpink"
+    android:gravity="center"
     android:layout_height="match_parent">
-    <Button
-        android:id="@+id/btn_beau_carmea"
+
+    <TextView
+        android:id="@+id/tv_beau_carmea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/camera"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:text="美化相机"
         />
-    <Button
-        android:id="@+id/btn_beau_pic"
+    <TextView
+        android:id="@+id/tv_beau_pic"
+        android:layout_below="@id/tv_beau_carmea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:drawableTop="@mipmap/beauty_image"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:text="图片美化"
         />
-</LinearLayout>
+</RelativeLayout>

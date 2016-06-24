@@ -2,12 +2,13 @@ package com.example.myapplication.util;
 
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.example.myapplication.R;
 
@@ -16,25 +17,31 @@ import com.example.myapplication.R;
  */
 public class PopupWindowUtil {
 
-    ImageView btn_info;
+    TextView tv_pic_info;
+    TextView tv_beauty_pic;
 
-    public PopupWindow showPopupInfo(int layoutId, Context context) {
+    public View showPopupInfo(int layoutId, Context context) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(layoutId, null);
-        btn_info = (ImageView) view.findViewById(R.id.iv_info);
-//        LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
-//        int width = param.width;
-//        int height = param.height;
+        tv_pic_info = (TextView) view.findViewById(R.id.tv_pic_info);
+        tv_beauty_pic = (TextView) view.findViewById(R.id.tv_beauty_pic);
         final PopupWindow popup = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, true);
         popup.setFocusable(true);//设置可点击
         popup.setAnimationStyle(R.animator.anim);//设置动画效果
         //设置点击空白消失
         popup.setTouchable(true);
         popup.setOutsideTouchable(true);
-        //popup.setBackgroundDrawable(android.R.color.transparent);
         ColorDrawable dw = new ColorDrawable(0xb0000000);
         popup.setBackgroundDrawable(dw);
-
+        popup.showAtLocation(view, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+//        if(page.equals("imageActivity")){
+//
+//            tv_pic_info.setText("图片信息");
+//            tv_beauty_pic.setText("美化图片");
+//        }else if(page.equals("placeFragment")){
+//            tv_pic_info.setText("从图库中选择");
+//            tv_beauty_pic.setText("从时间列表中选择");
+//        }
         view.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -47,8 +54,7 @@ public class PopupWindowUtil {
                 return true;
             }
         });
-
-        return popup;
+        return view;
 
     }
 }

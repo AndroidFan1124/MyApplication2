@@ -32,6 +32,8 @@ public class ThirdActivity extends BaseMainActivity implements View.OnClickListe
         rl_user = (RelativeLayout)findViewById(R.id.rl_user);
         tv_username = (TextView)findViewById(R.id.tv_username);
         civ_userIcon = (CircleImageView)findViewById(R.id.civ_userIcon);
+        TextView tv_title = (TextView)findViewById(R.id.text_title);
+        tv_title.setText("图片美化");
     }
 
     private void initEvents() {

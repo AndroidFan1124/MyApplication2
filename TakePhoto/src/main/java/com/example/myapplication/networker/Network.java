@@ -258,6 +258,7 @@ public class Network implements NetworkWatched {
 	@Override
 	public void onPostReceive(Object obj) {
 		// TODO Auto-generated method stub
+		Log.d(TAG,"msg---->"+obj.toString());
 		Message msg = Message.obtain();
 		msg.obj = obj;
 		msg.what = GET_POST;

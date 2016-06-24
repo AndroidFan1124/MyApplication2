@@ -5,7 +5,18 @@
     android:background="@color/lightpink"
     android:clickable="true"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
 
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/view_head"
+
+            />
+
+    </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -21,59 +32,34 @@
             >
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/match_wrap"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    style="@style/info_name"
                     android:text="用户名" />
 
                 <EditText
-                    android:id="@+id/username"
-                    android:layout_width="match_parent"
-                    android:layout_height="38dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/white"
-                    android:hint="6-20位字母、数字或下划线"
-                    android:paddingLeft="5dp"
-                    android:textSize="14sp" />
+                    android:id="@+id/et_username"
+                    style="@style/register_detail"
+                    android:hint="6-20位字母、数字或下划线" />
             </LinearLayout>
 
-
-            <TextView
-                android:id="@+id/t_username"
-                android:layout_width="match_parent"
-                android:layout_height="15dp"
-                android:paddingLeft="5dp"
-                android:text="6-20位字母、数字或下划线的用户名"
-                android:textColor="@color/red"
-                android:textSize="12sp"
-                android:visibility="gone" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+               style="@style/match_wrap"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    style="@style/info_name"
                     android:text="密码" />
 
                 <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="38dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/white"
+                    android:id="@+id/et_password"
+                    style="@style/register_detail"
                     android:hint="6-20位字母、数字或下划线"
-                    android:paddingLeft="5dp"
+
                     android:password="true"
-                    android:textSize="14sp" />
+                     />
             </LinearLayout>
 
             <TextView
@@ -87,26 +73,19 @@
                 android:visibility="gone" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/match_wrap"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    style="@style/info_name"
                     android:text="确认密码" />
 
                 <EditText
-                    android:id="@+id/secondpassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="38dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/white"
-                    android:hint="请重复密码"
-                    android:paddingLeft="5dp"
+                    android:id="@+id/et_repassword"
+                    style="@style/register_detail"
+                    android:hint="请重复输入密码"
                     android:password="true"
-                    android:textSize="14sp" />
+                    />
             </LinearLayout>
 
             <TextView
@@ -120,25 +99,19 @@
                 android:visibility="gone" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/match_wrap"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    style="@style/info_name"
                     android:text="手机号" />
 
                 <EditText
-                    android:id="@+id/phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="38dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/white"
+                    android:id="@+id/et_phone"
+                    style="@style/register_detail"
                     android:hint="请输入11位数字的手机号码"
-                    android:paddingLeft="5dp"
-                    android:textSize="14sp" />
+                    android:maxLength="11"
+                     />
             </LinearLayout>
 
             <TextView
@@ -152,25 +125,18 @@
                 android:visibility="gone" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/match_wrap"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    style="@style/info_name"
                     android:text="电子邮箱" />
 
                 <EditText
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="38dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/white"
+                    android:id="@+id/et_email"
+                    style="@style/register_detail"
                     android:hint="请输入邮箱地址"
-                    android:paddingLeft="5dp"
-                    android:textSize="14sp" />
+                    />
             </LinearLayout>
 
             <TextView
@@ -184,7 +150,7 @@
                 android:visibility="gone" />
 
             <Button
-                android:id="@+id/register"
+                android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:layout_marginTop="20dp"

@@ -34,7 +34,6 @@ public class OrderTimeFragment extends Fragment implements
     private TextView seleted_all;
     private ImageButton delete_loc;
     private TextView show_num;
-
     //presenter
     OrderTimePresenter presenter;
 

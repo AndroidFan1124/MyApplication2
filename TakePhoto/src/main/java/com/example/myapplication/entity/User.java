@@ -15,9 +15,14 @@ public class User implements Serializable{
 
     private String telnum;
 
-    private String email;
+    private String msg;
 
     private String iconPath;
+
+    private String phone;
+
+    private String email;
+
 
     public Integer getId() {
         return id;
@@ -81,5 +86,21 @@ public class User implements Serializable{
 
     public void setIconPath(String iconPath) {
         this.iconPath = iconPath;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 }

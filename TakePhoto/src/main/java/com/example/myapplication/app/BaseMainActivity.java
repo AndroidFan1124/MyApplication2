@@ -129,13 +129,13 @@ public class BaseMainActivity extends BaseActivity implements IBaseMainView,
 	@Override
 	public void onReceive(Object obj) {
 		// TODO Auto-generated method stub
-		Log.d("wangmengyan", "basemain----onreceive>"+obj.toString());
+		Log.d("wmy", "basemain----onreceive>"+obj.toString());
 	}
 	@Override
 	public void onGetReceive(Object obj) {
 		// TODO Auto-generated method stub
 		super.onGetReceive(obj);
-		Log.d("wangmengyan", "basemain----getreceive>"+obj.toString());
+		Log.d("wmy", "basemain----getreceive>"+obj.toString());
 	}
 
 }

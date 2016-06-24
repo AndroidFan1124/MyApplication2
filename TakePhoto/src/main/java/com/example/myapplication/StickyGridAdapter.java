@@ -13,7 +13,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.myapplication.entity.GridItem;
+import com.example.myapplication.entity.Picture;
 import com.example.myapplication.stickygridheaders.StickyGridHeadersSimpleAdapter;
 import com.example.myapplication.util.NativeImageLoader;
 import com.example.myapplication.widget.MyImageView;
@@ -28,7 +28,7 @@ import java.util.Map;
 public class StickyGridAdapter extends BaseAdapter implements StickyGridHeadersSimpleAdapter {
 
     Context context;
-    List<GridItem> mGridList;
+    List<Picture> mGridList;
     GridView gridView;
     private LayoutInflater mInflater;
     private Point mPoint = new Point(0, 0);//用来封装ImageView的宽和高的对象
@@ -39,7 +39,7 @@ public class StickyGridAdapter extends BaseAdapter implements StickyGridHeadersS
     // 用来控制CheckBox的选中状况
     private static HashMap<Integer, Boolean> isSelected;
 
-    public StickyGridAdapter(Context context, List<GridItem> girdList, GridView GridView, HashMap<Integer, Boolean> mSelectMap) {
+    public StickyGridAdapter(Context context, List<Picture> girdList, GridView GridView, HashMap<Integer, Boolean> mSelectMap) {
         this.context = context;
         mInflater = LayoutInflater.from(context);
         Log.d("wmy", "mGridList:" + girdList);

@@ -4,7 +4,8 @@ package com.example.myapplication.entity;
  * Created by Administrator on 2016/5/24.
  */
 public class Place {
-    Integer id;
+
+
     String time;//拍照时间
     double latitude;
     double lontitude;
@@ -18,13 +19,6 @@ public class Place {
     String locationType;
 
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getTime() {
         return time;
@@ -117,8 +111,7 @@ public class Place {
     @Override
     public String toString() {
         return "Place{" +
-                "id=" + id +
-                ", time='" + time + '\'' +
+                "time='" + time + '\'' +
                 ", latitude=" + latitude +
                 ", lontitude=" + lontitude +
                 ", country='" + country + '\'' +

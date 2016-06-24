@@ -1,13 +1,19 @@
 package com.example.myapplication.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2016/5/31.
  */
-public class Picture {
+public class Picture implements Serializable{
 
-    private Integer id;
-    private String path;
-    private long times;
+    private Integer id;//id
+    private String path;//路径
+    private String time;//时间
+
+    private Place place;//地点信息
+    private int section;//头部
+
 
 
 
@@ -27,6 +33,15 @@ public class Picture {
     private String orientation ;//方向
     private String whitebalance ;//白平衡
 
+    private  String size;//大小
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
 
     public Integer getId() {
         return id;
@@ -94,12 +109,28 @@ public class Picture {
         this.gpsLongitude = gpsLongitude;
     }
 
-    public long getTimes() {
-        return times;
+    public String getTime() {
+        return time;
     }
 
-    public void setTimes(long times) {
-        this.times = times;
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public Place getPlace() {
+        return place;
+    }
+
+    public void setPlace(Place place) {
+        this.place = place;
+    }
+
+    public int getSection() {
+        return section;
+    }
+
+    public void setSection(int section) {
+        this.section = section;
     }
 
     public String getGpsLongitudeRef() {

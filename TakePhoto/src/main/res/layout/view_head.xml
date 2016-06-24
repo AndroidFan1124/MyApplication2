@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/header"
-    style="@style/title_bg"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <RelativeLayout
         style="@style/title_bg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="49dp">
 
         <LinearLayout
             android:id="@+id/linear_back"
@@ -51,7 +50,7 @@
                 android:gravity="center"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/white"
-                android:text="你好你好"
+                android:text="首页"
                 android:textSize="22sp"></TextView>
         </LinearLayout>
 
@@ -84,5 +83,10 @@
                 <!--android:visibility="invisible" />-->
         </FrameLayout>
     </RelativeLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/white"/>
 
 </LinearLayout>

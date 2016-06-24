@@ -1,6 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightpink"
+    android:clickable="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
 
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/view_head"
+
+            />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="日期" />
+
+                <TextView
+                    android:id="@+id/tv_exif_date"
+                    style="@style/info_detail"
+                    android:text="HUAWEIG520"
+                   />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="手机型号" />
+
+                <TextView
+                    android:id="@+id/tv_exif_model"
+                    style="@style/info_detail"
+                    android:text="HUAWEIG520" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="闪光灯" />
+
+                <TextView
+                    android:id="@+id/tv_exif_falsh"
+                    style="@style/info_detail"
+                    android:text="HUAWEIG520" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="ISO" />
+
+                <TextView
+                    android:id="@+id/tv_exif_iso"
+                    style="@style/info_detail"
+                    android:text="HUAWEIG520"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="白平衡" />
+
+                <TextView
+                    android:id="@+id/tv_exif_whitebalance"
+                    style="@style/info_detail"
+                    android:text="HUAWEIG520" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="光圈" />
+
+                <TextView
+                    android:id="@+id/tv_exif_aperture"
+                    style="@style/info_detail"
+                    android:text="HUAWEIG520" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="文件大小" />
+
+                <TextView
+                    android:id="@+id/tv_size"
+                    style="@style/info_detail"
+                    android:text="HUAWEIG520" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="文件路径" />
+
+                <TextView
+                    android:id="@+id/tv_path"
+                    style="@style/info_detail"
+                    android:text="HUAWEIG520" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="位置" />
+
+                <EditText
+                    android:id="@+id/et_exif_place"
+                    style="@style/info_detail"
+                    android:hint="中国 乌鲁木齐"
+                    android:background="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="文件名" />
+
+                <EditText
+                    android:id="@+id/et_exif_name"
+                    style="@style/info_detail"
+                    android:hint="2312312312.jpg"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/info_name"
+                    android:text="拍摄者" />
+
+                <EditText
+                    android:id="@+id/et_exif_taker"
+                    android:hint="照片拍摄者"
+                    style="@style/info_detail"
+                    android:text="HUAWEIG520"
+                    android:background="@color/white"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_pic_update"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_login_background"
+                android:text="修改"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

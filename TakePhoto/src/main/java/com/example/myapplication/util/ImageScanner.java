@@ -28,6 +28,8 @@ public class ImageScanner {
                 callback.scanComplete((Cursor) msg.obj);
             }
         };
+//        Error:Error converting bytecode to dex:
+//        Cause: com.android.dex.DexException: Multiple dex files define Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
         new Thread(new Runnable() {
             @Override
             public void run() {

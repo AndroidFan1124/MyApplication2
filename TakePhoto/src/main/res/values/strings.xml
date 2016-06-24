@@ -8,6 +8,9 @@
     <string name="sample_CameraComponent">相机组件</string>
 
 
+    <string name="beauty_pic">美化图片</string>
+    <string name="pic_info">图片信息</string>
+
     <!-- sample group -->
     <string name="sample_group_suite">功能套件</string>
     <string name="sample_group_comp">常用组件</string>

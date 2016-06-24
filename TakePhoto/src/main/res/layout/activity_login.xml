@@ -8,16 +8,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="50dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="会员登录"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+       <include
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           layout="@layout/view_head"
+           />
 
     </LinearLayout>
 

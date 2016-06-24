@@ -3,6 +3,7 @@ package com.example.myapplication.activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.FrameLayout;
 
 import com.example.myapplication.R;
@@ -20,7 +21,7 @@ public class FirstActivity extends BaseMainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-//        initView();
+        initView();
 //        initData();
         setDefaultFragment();
     }
@@ -33,7 +34,8 @@ public class FirstActivity extends BaseMainActivity {
         transaction.commit();
     }
 
-//    private void initView() {
-//        mFrameLayout = (FrameLayout)findViewById(R.id.id_content);
-//    }
+    private void initView() {
+        View view_title = findViewById(R.id.view_head);
+        view_title.setVisibility(View.GONE);
+    }
 }

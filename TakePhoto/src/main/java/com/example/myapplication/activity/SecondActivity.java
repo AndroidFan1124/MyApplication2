@@ -2,7 +2,7 @@ package com.example.myapplication.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.app.BaseMainActivity;
@@ -12,10 +12,10 @@ import com.example.myapplication.view.ISecondView;
 /**
  * Created by Administrator on 2016/5/26.
  */
-public class SecondActivity extends BaseMainActivity implements ISecondView, View.OnClickListener {
+public class  SecondActivity extends BaseMainActivity implements ISecondView, View.OnClickListener {
 
-    private Button beau_carmea;
-    private Button beau_pic;
+    private TextView beau_carmea;
+    private TextView beau_pic;
     private SecondPresenter presenter;
 
     @Override
@@ -28,8 +28,10 @@ public class SecondActivity extends BaseMainActivity implements ISecondView, Vie
     }
 
     private void initView() {
-        beau_carmea = (Button) findViewById(R.id.btn_beau_carmea);
-        beau_pic = (Button) findViewById(R.id.btn_beau_pic);
+        beau_carmea = (TextView) findViewById(R.id.tv_beau_carmea);
+        beau_pic = (TextView) findViewById(R.id.tv_beau_pic);
+        TextView tv_title = (TextView)findViewById(R.id.text_title);
+        tv_title.setText("图片美化");
     }
 
     private void initEvents() {
@@ -45,10 +47,10 @@ public class SecondActivity extends BaseMainActivity implements ISecondView, Vie
     public void onClick(View arg0) {
         super.onClick(arg0);
         switch (arg0.getId()) {
-            case R.id.btn_beau_carmea:
+            case R.id.tv_beau_carmea:
                 presenter.openCarmea(SecondActivity.this);
                 break;
-            case R.id.btn_beau_pic:
+            case R.id.tv_beau_pic:
                 presenter.beautyPic(SecondActivity.this);
                 break;
             default:
